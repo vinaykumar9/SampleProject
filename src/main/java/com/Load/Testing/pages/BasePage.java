@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
@@ -31,6 +32,7 @@ public class BasePage {
 	public static WebDriverWait wait;
 	public static Properties prop;
 	public Select select;
+	public static Alert alert;
 
 	
 /*	public static void initialisation(){
@@ -85,7 +87,7 @@ public static void initilization() {
 
 //public static void navigateToUrl(){
 //	driver.get(prop.getProperty("url"));
-//	 
+	 
 //}
 public static void forElementVisibility(WebElement webelement) {
 	wait = new WebDriverWait(driver, 10);
