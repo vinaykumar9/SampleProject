@@ -96,6 +96,10 @@ public void implicitWait(int waitTime) {
 	driver.manage().timeouts().implicitlyWait(waitTime, TimeUnit.SECONDS);
 }
 
+public void getTitle(){
+	System.out.println("data");
+}
+
 
 }
 
