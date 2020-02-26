@@ -54,6 +54,7 @@ public BasePage() {
 	 try {
 		 prop = new Properties(	);
 		 FileInputStream fin = new FileInputStream("C:\\LoadTesting\\src\\main\\resources\\config.properties");
+		 
          prop.load(fin);
          }
 	 catch(FileNotFoundException  e){
