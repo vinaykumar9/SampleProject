@@ -47,6 +47,8 @@ public class BasePage {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	
 	}*/
+	
+	//DKUFIGFY
 
 public BasePage() {
 	 try {
