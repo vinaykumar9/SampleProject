@@ -49,40 +49,14 @@ public class HomePageTest extends BaseTest {
 		logger.log(LogStatus.PASS, "travelling from location");
 }
 	
-	
-   @Test(priority=3)
-		public void travellingWithoutDestName() throws InterruptedException{
-		logger = extent.startTest("travelling To location");
-
-	   System.out.println(driver.getCurrentUrl());
-			home.enterFromToStations("Miami (MIA), Florida, USA","","13/02/2020","19/02/2020","5","1");
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			boolean expected = home.erroeMessage();
-			Assert.assertEquals(true, expected);
-			logger.log(LogStatus.PASS, "travelling to location");
-
-			
-   }
+@Test(priority=3)
+public void VerifyHomePageTitle(){
+    String title = home.getTitle();
+    System.out.println(title);
+    Assert.assertEquals(title, "American Airlines");
+}
    
-   
-   @Test(priority=4)
-   public void testcase(){
-		logger = extent.startTest("testcase4");
 
-	   System.out.println("test case 4 executed");
-		logger.log(LogStatus.PASS, "testcase4");
-
-
-   }
-   
-   @Test(priority=5)
-   public void testcase3(){
-		logger = extent.startTest("testcase5");
-
-	   System.out.println("test case 3 executed");
-		logger.log(LogStatus.PASS, "testcase5");
-
-   }
 	@AfterMethod
 	public void getResult(ITestResult result){
 	      driver.close();

@@ -53,7 +53,7 @@ public class BasePage {
 public BasePage() {
 	 try {
 		 prop = new Properties(	);
-		 FileInputStream fin = new FileInputStream("C:\\LoadTesting\\src\\main\\resources\\config.properties");
+		 FileInputStream fin = new FileInputStream("C:\\project_details\\SampleProject\\src\\main\\resources\\config.properties");
 		 
          prop.load(fin);
          }
@@ -73,7 +73,7 @@ public static void takeScreenShot(String image_name) throws Exception, IOExcepti
 public static void initilization() {
 	String browser_name = prop.getProperty("browser");
 	if(browser_name.equalsIgnoreCase("chrome")) {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\vreddy239\\Downloads\\chromedriver_win32_80\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\project_details\\SampleProject\\Drivers\\chromedriver.exe");
 		 driver = new ChromeDriver();
 	}
 	else if(browser_name.equalsIgnoreCase("ie")) {
@@ -101,8 +101,8 @@ public void implicitWait(int waitTime) {
 	driver.manage().timeouts().implicitlyWait(waitTime, TimeUnit.SECONDS);
 }
 
-public void getTitle(){
-	System.out.println("data");
+public String getTitle(){
+	return driver.getTitle();
 }
 
 
